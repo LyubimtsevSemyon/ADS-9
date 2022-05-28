@@ -6,7 +6,6 @@
 #include  "bst.h"
 
 BST<std::string> makeTree(const char* filename) {
-  // поместите сюда свой код
   BST<std::string> bst;
   std::ifstream file(filename);
   std::string word = "";
@@ -16,9 +15,9 @@ BST<std::string> makeTree(const char* filename) {
   while (!file.eof()) {
     word = "";
     while (true) {
-      char pod = file.get();
-      if ((pod >= 65 && pod <= 90) || (pod >= 97 && pod <= 122)) {
-        word += tolower(pod);
+      char dop = file.get();
+      if ((dop >= 65 && dop <= 90) || (dop >= 97 && dop <= 122)) {
+        word += tolower(dop);
       } else {
         break;
       }
