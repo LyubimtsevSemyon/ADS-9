@@ -40,17 +40,17 @@ class BST {
             }
     }
     int depth_p(Node* root) {
-      int lft = 0, rht = 0;
+      int a = 0, b = 0;
       if (root == nullptr) {
         return 0;
       } else {
-          lft = depth_p(root->left);
-          rht = depth_p(root->right);
+          a = depth_p(root->left);
+          b = depth_p(root->right);
         }
-        if (rht > lft) {
-            return ++rht;
+        if (b > a) {
+            return ++b;
         } else {
-            return ++lft;
+            return ++a;
           }
     }
 
