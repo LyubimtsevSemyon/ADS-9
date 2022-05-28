@@ -8,22 +8,22 @@
 BST<std::string> makeTree(const char* filename) {
   BST<std::string> MyTree;
   std::ifstream fin(filename);
-  char temp;
+  char G;
   std::string word = "";
   if (!fin.is_open()) {
       std::cout << "Error! File can't be open!" << std::endl;
       return MyTree;
   }
   while (!fin.eof()) {
-      temp = fin.get();
-      if (temp >= 'A') {
-          if (temp <= 'Z') {
-              temp = temp + 32;
+      G = fin.get();
+      if (G >= 'A') {
+          if (G <= 'Z') {
+              G = G + 32;
           }
       }
-      if (temp >= 'a') {
-          if (temp <= 'z') {
-              word = word + temp;
+      if (G >= 'a') {
+          if (G <= 'z') {
+              word = word + G;
           }
       } else {
           MyTree.Add(word);
